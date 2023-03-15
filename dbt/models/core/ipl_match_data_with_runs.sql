@@ -15,9 +15,7 @@
     m.toss_decision,
     m.winner,
     m.result,
-    r.batting_team,
-    r.bowling_team,
-	r.total_runs,
+	r.total_runs_by_both_team,
 
 
 from {{ ref('stg_ipl_match') }}  m 
