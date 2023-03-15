@@ -3,7 +3,7 @@
 select
     -- identifiers
     id,
-    {{ dbt_utils.surrogate_key(['team1', 'team2']) }} as matchbtw,
+    concat(team1, ' vs ', team2) as matchbtw,
     city,
     cast(date as date) as date,
     player_of_match,
