@@ -6,4 +6,5 @@ sources:
       schema: raw_ipl_match_data
       tables:
         - name: match_data
+        - name: ball_by_ball
 
