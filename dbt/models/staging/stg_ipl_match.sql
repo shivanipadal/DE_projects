@@ -3,7 +3,11 @@
 select
     -- identifiers
     id,
-    concat(team1, ' vs ', team2) as matchbtw,
+    case when lower(team1) > lower(team2)
+         then concat(team2, ' vs ', team1)
+    else 
+        concat(team1, ' vs ', team2) 
+    end as matchbtw,
     city,
     cast(date as date) as date,
     player_of_match,
@@ -14,6 +18,12 @@ select
     toss_winner,
     toss_decision,
     winner,
-    result
+    result,
+    case when toss_winner = winner 
+    then 'yes'
+    else
+    'no'
+    end as is_toss_winner_winner ,
+
 
     from {{ source('staging','match_data') }}
