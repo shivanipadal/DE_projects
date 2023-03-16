@@ -15,7 +15,10 @@
     m.toss_decision,
     m.winner,
     m.result,
+    m.is_toss_winner_winner,
+    extract(year from date) as year,
 	r.total_runs_by_both_team,
+    
 
 
 from {{ ref('stg_ipl_match') }}  m 
