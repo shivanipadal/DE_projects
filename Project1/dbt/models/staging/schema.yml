@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+    - name: staging
+      database: de-project-2023
+      schema: raw_ipl_match_data
+      tables:
+        - name: match_data
+        - name: ball_by_ball
+
