@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+    - name: staging
+      database: de-project-2023
+      schema: fire_accident_raw_data
+      tables:
+        - name: fire_data_sanfrancisco
