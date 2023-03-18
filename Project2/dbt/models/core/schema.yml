@@ -14,7 +14,7 @@ models:
           - name: incidentnumber
           - name: id 
             description: Primary key for this table
-            tests:
+            tests: 
                 - unique:
                     severity: warn
                 - not_null:
